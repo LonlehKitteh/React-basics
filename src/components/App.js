@@ -1,3 +1,4 @@
+import React from 'react'
 import Navigation from "./Navigation"
 import { Route, Routes } from 'react-router-dom'
 import Home from "./pages/Home"
