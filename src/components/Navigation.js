@@ -37,7 +37,7 @@ export default function Navigation() {
                                 </NavDropdown>
 
                             }
-                            return <CustomLink key={key} to={link['main-link'] === 'home' ? '/' : `/${link['main-link'].toLowerCase()}`}>{link['main-link']}</CustomLink>
+                            return <CustomLink key={key} to={link['main-link'].toLowerCase() === 'home' ? '/' : `/${link['main-link'].toLowerCase()}`}>{link['main-link']}</CustomLink>
                         })}
                     </Nav>
                     <Form className="d-flex">

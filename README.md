@@ -1,8 +1,5 @@
 # **Dependencies I installed!**
 
-1. **react-router-dom**.
-2. **bootstrap react-bootstrap** <!-- I fix the problem! -->
-
 <!-- Please remove list after you install missing dependencies -->
 ## **Naming class and id**
 
