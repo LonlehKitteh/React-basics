@@ -4,10 +4,10 @@
     },
     {
         "main-link": "Pages",
-        "pages": ["test1", "test2"]
+        "pages": ["Test1", "Test2"]
     },
     {
         "main-link": "Tutorial",
-        "pages": ["test1"]
+        "pages": ["Test1"]
     }
 ]
