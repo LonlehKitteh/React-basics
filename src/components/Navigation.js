@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import links from './data/links.json';
+import '../css/Navigation.css';
 
 export default function Navigation() {
     return (
@@ -27,9 +28,11 @@ export default function Navigation() {
                                             return (
                                                 <React.Fragment key={`${key}-${index}`}>
                                                     {index === link.pages.length - 1 ? <NavDropdown.Divider /> : null}
+                                                    <CustomLink to={`/${page.toLowerCase()}`}>
                                                     <NavDropdown.Item as='div'>
-                                                        <CustomLink to={`/${page.toLowerCase()}`}>{page}</CustomLink>
+                                                        {page}
                                                     </NavDropdown.Item>
+                                                    </CustomLink>
                                                 </React.Fragment>
                                             )
                                         })
@@ -59,5 +62,5 @@ function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
-    return <Nav.Link as="div"><Link className={isActive ? "active" : ""} to={to} {...props}>{children}</Link></Nav.Link>
+    return <Nav.Link as="span"><Link className={`custom-link ${isActive ? "active" : ""}`} to={to} {...props}>{children}</Link></Nav.Link>
 }
