@@ -1,5 +1,7 @@
 # **Dependencies I installed!**
 
+1. npm install --save react-helmet-async
+
 <!-- Please remove list after you install missing dependencies -->
 ## **Naming class and id**
 
