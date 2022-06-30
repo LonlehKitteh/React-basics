@@ -30,7 +30,7 @@ function App() {
       </HelmetProvider>
       <Navigation />
       <Suspense fallback={<LoadingSpinner />}>
-        <div className="push">
+        <div className={`push ${title.toLowerCase()}`}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

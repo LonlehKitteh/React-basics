@@ -1,5 +1,5 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -10,8 +10,21 @@ import links from './data/links.json';
 import '../css/Navigation.css';
 
 export default function Navigation() {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    const handleNavigation = () => window.scrollY ? setIsScrolled(true) : setIsScrolled(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleNavigation)
+
+        return () => {
+            window.removeEventListener('scroll', handleNavigation)
+        }
+    }, [handleNavigation])
+
+
     return (
-        <Navbar bg="dark" variant='dark' expand="lg" sticky="top">
+        <Navbar bg={isScrolled ? 'light' : 'dark'} variant={isScrolled ? 'light' : 'dark'} expand="lg" sticky="top">
             <Container fluid>
                 <Navbar.Brand><Link to='/'>Logo</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -29,9 +42,9 @@ export default function Navigation() {
                                                 <React.Fragment key={`${key}-${index}`}>
                                                     {index === link.pages.length - 1 ? <NavDropdown.Divider /> : null}
                                                     <CustomLink to={`/${page.toLowerCase()}`}>
-                                                    <NavDropdown.Item as='div'>
-                                                        {page}
-                                                    </NavDropdown.Item>
+                                                        <NavDropdown.Item as='div'>
+                                                            {page}
+                                                        </NavDropdown.Item>
                                                     </CustomLink>
                                                 </React.Fragment>
                                             )
@@ -62,5 +75,5 @@ function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
-    return <Nav.Link as="span"><Link className={`custom-link ${isActive ? "active" : ""}`} to={to} {...props}>{children}</Link></Nav.Link>
+    return <Nav.Link as="div"><Link className={isActive ? "active" : ""} to={to} {...props}>{children}</Link></Nav.Link>
 }
