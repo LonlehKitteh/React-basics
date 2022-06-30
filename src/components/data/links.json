@@ -3,11 +3,11 @@
         "main-link": "Home"
     },
     {
-        "main-link": "Pages",
-        "pages": ["About", "Service"]
+        "main-link": "Hooks",
+        "pages": ["useState", "useEffect", "useRef", "useCallback", "useMemo", "useContext", "useReducer"]
     },
     {
-        "main-link": "Service",
-        "pages": ["Test1"]
+        "main-link": "About",
+        "pages": ["About"]
     }
 ]
