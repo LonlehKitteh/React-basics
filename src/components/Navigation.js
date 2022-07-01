@@ -40,7 +40,7 @@ export default function Navigation() {
                                         link.pages.map((page, index) => {
                                             return (
                                                 <React.Fragment key={`${key}-${index}`}>
-                                                    {index === link.pages.length - 1 ? <NavDropdown.Divider /> : null}
+                                                    {/* {index === link.pages.length - 1 ? <NavDropdown.Divider /> : null} */}
                                                     <CustomLink to={`/${page.toLowerCase()}`}>
                                                         <NavDropdown.Item as='div'>
                                                             {page}
