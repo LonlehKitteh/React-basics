@@ -12,16 +12,15 @@ import '../css/Navigation.css';
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false)
 
-    const handleNavigation = () => window.scrollY ? setIsScrolled(true) : setIsScrolled(false)
-
     useEffect(() => {
+        const handleNavigation = () => window.scrollY ? setIsScrolled(true) : setIsScrolled(false)
+
         window.addEventListener('scroll', handleNavigation)
 
         return () => {
             window.removeEventListener('scroll', handleNavigation)
         }
-    }, [handleNavigation])
-
+    })
 
     return (
         <Navbar bg={isScrolled ? 'light' : 'dark'} variant={isScrolled ? 'light' : 'dark'} expand="lg" sticky="top">
@@ -40,7 +39,6 @@ export default function Navigation() {
                                         link.pages.map((page, index) => {
                                             return (
                                                 <React.Fragment key={`${key}-${index}`}>
-                                                    {/* {index === link.pages.length - 1 ? <NavDropdown.Divider /> : null} */}
                                                     <CustomLink to={`/${page.toLowerCase()}`}>
                                                         <NavDropdown.Item as='div'>
                                                             {page}
@@ -53,7 +51,11 @@ export default function Navigation() {
                                 </NavDropdown>
 
                             }
-                            return <CustomLink key={key} to={link['main-link'].toLowerCase() === 'home' ? '/' : `/${link['main-link'].toLowerCase()}`}>{link['main-link']}</CustomLink>
+                            return (
+                                <Nav.Link key={key} as="div" className='px-2'>
+                                    <CustomLink to={link['main-link'].toLowerCase() === 'home' ? '/' : `/${link['main-link'].toLowerCase()}`}>{link['main-link']}</CustomLink>
+                                </Nav.Link>
+                            )
                         })}
                     </Nav>
                     <Form className="d-flex">
@@ -75,5 +77,5 @@ function CustomLink({ to, children, ...props }) {
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
-    return <Nav.Link as="div"><Link className={isActive ? "active" : ""} to={to} {...props}>{children}</Link></Nav.Link>
+    return <Link className={isActive ? "active" : ""} to={to} {...props}>{children}</Link>
 }
