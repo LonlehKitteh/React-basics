@@ -23,31 +23,31 @@ export const routes = [
         component: Page404
     },
     {
-        path: '/hooks/usestate',
+        path: '/usestate',
         component: HookUseState
     },
     {
-        path: '/hooks/useEffect',
+        path: '/useEffect',
         component: HookUseEffect
     },
     {
-        path: 'hooks/useRef',
+        path: '/useRef',
         component: HookUseRef
     },
     {
-        path: 'hooks/useMemo',
+        path: '/useMemo',
         component: HookUseMemo
     },
     {
-        path: 'hooks/useCallback',
+        path: '/useCallback',
         component: HookUseCallback
     },
     {
-        path: 'hooks/useReducer',
+        path: '/useReducer',
         component: HookUseReducer
     },
     {
-        path: 'hooks/useContext',
+        path: '/useContext',
         component: HookUseContext
     },
     {
