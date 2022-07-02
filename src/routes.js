@@ -4,18 +4,17 @@ const Page404 = React.lazy(() => import('./components/pages/Page404'))
 const Home = React.lazy(() => import("./components/pages/Home"))
 const About = React.lazy(() => import("./components/pages/About"))
 const Service = React.lazy(() => import("./components/pages/Service"))
-const HookUseState = React.lazy(() => import("./components/pages/subPagesHooks/HookUseState"))
-const HookUseEffect = React.lazy(() => import("./components/pages/subPagesHooks/HookUseEffect"))
-const HookUseRef = React.lazy(() => import("./components/pages/subPagesHooks/HookUseRef"))
-const HookUseCallback = React.lazy(() => import("./components/pages/subPagesHooks/HookUseCallback"))
-const HookUseMemo = React.lazy(() => import("./components/pages/subPagesHooks/HookUseMemo"))
-const HookUseContext = React.lazy(() => import("./components/pages/subPagesHooks/HookUseContext"))
-const HookUseReducer = React.lazy(() => import("./components/pages/subPagesHooks/HookUseReducer"))
+const HookUseState = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseState"))
+const HookUseEffect = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseEffect"))
+const HookUseRef = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseRef"))
+const HookUseCallback = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseCallback"))
+const HookUseMemo = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseMemo"))
+const HookUseContext = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseContext"))
+const HookUseReducer = React.lazy(() => import("./components/pages/hooksIntroduction/HookUseReducer"))
 
 export const routes = [
     {
         path: '/',
-        exact: true,
         component: Home
     },
     {
@@ -23,35 +22,35 @@ export const routes = [
         component: Page404
     },
     {
-        path: '/hooks/usestate',
+        path: '/usestate',
         component: HookUseState
     },
     {
-        path: '/hooks/useEffect',
+        path: '/useEffect',
         component: HookUseEffect
     },
     {
-        path: 'hooks/useRef',
+        path: '/useRef',
         component: HookUseRef
     },
     {
-        path: 'hooks/useMemo',
+        path: '/useMemo',
         component: HookUseMemo
     },
     {
-        path: 'hooks/useCallback',
+        path: '/useCallback',
         component: HookUseCallback
     },
     {
-        path: 'hooks/useReducer',
+        path: '/useReducer',
         component: HookUseReducer
     },
     {
-        path: 'hooks/useContext',
+        path: '/useContext',
         component: HookUseContext
     },
     {
-        path: '/About',
+        path: '/about',
         component: About
     },
     {

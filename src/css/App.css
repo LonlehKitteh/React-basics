@@ -23,7 +23,7 @@
   margin: 20px auto;
   position: relative;
   background: currentColor;
-  color: var(--color60, fuchsia);
+  color: #8540f5;
   box-sizing: border-box;
   -webkit-animation: animloader 0.3s 0.3s linear infinite alternate;
           animation: animloader 0.3s 0.3s linear infinite alternate;

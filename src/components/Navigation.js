@@ -23,8 +23,8 @@ export default function Navigation() {
     })
 
     return (
-        <Navbar bg={isScrolled ? 'light' : 'dark'} variant={isScrolled ? 'light' : 'dark'} expand="lg" sticky="top">
-            <Container fluid>
+        <Navbar bg={isScrolled ? 'primary' : 'transparent'} variant='dark' expand="lg" sticky="top">
+            < Container fluid >
                 <Navbar.Brand><Link to='/'>Logo</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -65,11 +65,11 @@ export default function Navigation() {
                             className="me-2"
                             aria-label="Search"
                         />
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="success">Search</Button>
                     </Form>
                 </Navbar.Collapse>
-            </Container>
-        </Navbar>
+            </Container >
+        </Navbar >
     )
 }
 

@@ -1,6 +1,9 @@
+@import "./variables.scss";
+
 .navbar {
     transition: 0.3s ease-in-out;
-    :link{
+    :any-link {
         text-decoration: none;
+        color: black !important;
     }
 }

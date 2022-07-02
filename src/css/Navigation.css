@@ -1,6 +1,15 @@
 .navbar {
   transition: 0.3s ease-in-out;
 }
-.navbar :link {
+.navbar :-webkit-any-link {
   text-decoration: none;
+  color: black !important;
+}
+.navbar :-moz-any-link {
+  text-decoration: none;
+  color: black !important;
+}
+.navbar :any-link {
+  text-decoration: none;
+  color: black !important;
 }
