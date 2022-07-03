@@ -2,14 +2,20 @@
   transition: 0.3s ease-in-out;
 }
 .navbar :-webkit-any-link {
-  text-decoration: none;
-  color: black !important;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  color: gray !important;
 }
 .navbar :-moz-any-link {
-  text-decoration: none;
-  color: black !important;
+  text-decoration: dotted;
+  color: gray !important;
 }
 .navbar :any-link {
-  text-decoration: none;
-  color: black !important;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  color: gray !important;
+}
+
+.dropdown-item:active {
+  background-color: gray !important;
 }

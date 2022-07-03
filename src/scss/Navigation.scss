@@ -3,7 +3,12 @@
 .navbar {
     transition: 0.3s ease-in-out;
     :any-link {
-        text-decoration: none;
-        color: black !important;
+        text-decoration: dotted;
+        color: gray !important;
+    }
+}
+.dropdown-item{
+    &:active{
+        background-color: gray !important;
     }
 }
