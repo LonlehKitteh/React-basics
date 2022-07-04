@@ -67,3 +67,17 @@
     height: 4px;
   }
 }
+::-webkit-scrollbar {
+  background-color: rgb(36, 36, 36);
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(240, 240, 240);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5c5c5;
+}

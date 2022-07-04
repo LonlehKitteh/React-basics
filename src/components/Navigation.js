@@ -23,7 +23,7 @@ export default function Navigation() {
     })
 
     return (
-        <Navbar bg={isScrolled ? 'light' : 'dark'} expand="lg" sticky="top">
+        <Navbar bg={isScrolled ? 'dark' : 'light'} expand="lg" sticky="top">
             < Container fluid >
                 <Navbar.Brand><Link to='/'>Logo</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
