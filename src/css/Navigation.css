@@ -1,21 +1,37 @@
 .navbar {
   transition: 0.3s ease-in-out;
+  padding: 1vw 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.navbar.scrolled {
+  background: #fffff9;
+  padding: 0.5vw 0;
+}
+.navbar.scrolled :-webkit-any-link {
+  color: #323641 !important;
+}
+.navbar.scrolled :-moz-any-link {
+  color: #323641 !important;
+}
+.navbar.scrolled :any-link {
+  color: #323641 !important;
 }
 .navbar :-webkit-any-link {
   -webkit-text-decoration: dotted;
           text-decoration: dotted;
-  color: gray !important;
+  color: white !important;
 }
 .navbar :-moz-any-link {
   text-decoration: dotted;
-  color: gray !important;
+  color: white !important;
 }
 .navbar :any-link {
   -webkit-text-decoration: dotted;
           text-decoration: dotted;
-  color: gray !important;
+  color: white !important;
 }
 
 .dropdown-item:active {
-  background-color: gray !important;
+  background-color: gray;
 }

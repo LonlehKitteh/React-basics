@@ -23,7 +23,7 @@ export default function Navigation() {
     })
 
     return (
-        <Navbar bg={isScrolled ? 'dark' : 'light'} expand="lg" sticky="top">
+        <Navbar className={isScrolled ? 'scrolled' : ''} expand="lg" fixed="top">
             < Container fluid >
                 <Navbar.Brand><Link to='/'>Logo</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -59,12 +59,7 @@ export default function Navigation() {
                         })}
                     </Nav>
                     <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
+                        <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
                         <Button variant="success">Search</Button>
                     </Form>
                 </Navbar.Collapse>

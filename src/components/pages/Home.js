@@ -1,14 +1,19 @@
 import React from 'react'
-import Image from 'react-bootstrap/Image'
-import HomeImage from '../../assets/images/home.webP'
 import '../../css/Home.css'
+import RandomBackgroundTheme from '../layout/random/RandomBackgroundTheme'
+import Section from '../layout/Section'
 
 export default function Home() {
+
     return (
         <React.Fragment>
-            {/* <Image alt='abstraction' className="position-relative top-0 w-100 h-50" fluid src={HomeImage} /> */}
-            <div id="blank">Welcome to React Basics!</div>
-            <div id="home">Home</div>
+            <Section>
+                <div className="home-picture" />
+                <RandomBackgroundTheme />
+            </Section>
+            <Section>
+                <div>Home</div>
+            </Section>
         </React.Fragment>
     )
 }

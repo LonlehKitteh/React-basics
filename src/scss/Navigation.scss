@@ -2,13 +2,23 @@
 
 .navbar {
     transition: 0.3s ease-in-out;
+    padding: 1vw 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    &.scrolled {
+        background: #fffff9;
+        padding: 0.5vw 0;
+        :any-link {
+            color: #323641 !important;
+        }
+    }
     :any-link {
         text-decoration: dotted;
-        color: gray !important;
+        color: white !important;
     }
 }
-.dropdown-item{
-    &:active{
-        background-color: gray !important;
+.dropdown-item {
+    &:active {
+        background-color: gray;
     }
 }
