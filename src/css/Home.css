@@ -1,3 +1,59 @@
+@-webkit-keyframes home-page-title {
+  from {
+    content: "For the worthy!";
+  }
+  25% {
+    content: "Search for something.";
+  }
+  50% {
+    content: "Come on don't be afraid!";
+  }
+  75% {
+    content: "The world isn't for cowards.";
+  }
+  100% {
+    content: "For the worthy!";
+  }
+}
+@keyframes home-page-title {
+  from {
+    content: "For the worthy!";
+  }
+  25% {
+    content: "Search for something.";
+  }
+  50% {
+    content: "Come on don't be afraid!";
+  }
+  75% {
+    content: "The world isn't for cowards.";
+  }
+  100% {
+    content: "For the worthy!";
+  }
+}
+@-webkit-keyframes visibility-home {
+  from, 40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes visibility-home {
+  from, 40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
 .home-picture, .random-background-theme {
   height: max(40vw, 300px);
   width: 100%;
@@ -5,14 +61,6 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  transition: filter 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home-picture.scrolled, .scrolled.random-background-theme {
-  transition: filter 0.3s ease-in-out;
-  filter: blur(3px);
 }
 
 .random-background-theme {
@@ -22,4 +70,25 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+}
+.search .search-title {
+  font-size: 3rem;
+  color: white;
+  margin: 2rem;
+  text-align: center;
+  position: relative;
+  flex-grow: 1;
+}
+.search .search-title::after {
+  content: "";
+  -webkit-animation: home-page-title 20s ease-in-out infinite forwards, visibility-home 5s ease-in-out infinite forwards;
+          animation: home-page-title 20s ease-in-out infinite forwards, visibility-home 5s ease-in-out infinite forwards;
 }

@@ -1,0 +1,5 @@
+@import "../../../scss/mixins";
+
+.section {
+    @include flex-center;
+}

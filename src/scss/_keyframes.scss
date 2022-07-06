@@ -1,0 +1,22 @@
+@keyframes home-page-title {
+    from {
+        content: map-get($messages, length($messages));
+    }
+    @each $key, $value in $messages {
+        #{"#{calc(100 / length($messages)) * $key}%"} {
+            content: $value;
+        }
+    }
+}
+@keyframes visibility-home {
+    from,
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+}
