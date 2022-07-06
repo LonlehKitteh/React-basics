@@ -5,6 +5,14 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  transition: filter 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-picture.scrolled, .scrolled.random-background-theme {
+  transition: filter 0.3s ease-in-out;
+  filter: blur(3px);
 }
 
 .random-background-theme {
