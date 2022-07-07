@@ -2,7 +2,6 @@ import React from 'react';
 import '../../css/Home.css'
 import RandomBackgroundTheme from '../layout/components/random/RandomBackgroundTheme'
 import Section from '../layout/components/Section'
-import Search from '../layout/components/Search';
 
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
             <Section>
                 <div className='home-picture'></div>
                 <RandomBackgroundTheme />
-                <Search />
+                <div className='search-title'></div>
             </Section>
             <Section>
                 <div>Home</div>

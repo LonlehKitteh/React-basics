@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import links from './data/links.json';
 import '../css/Navigation.css';
+import Search from './layout/components/Search';
+import Button from 'react-bootstrap/esm/Button';
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false)
@@ -47,7 +49,6 @@ export default function Navigation() {
                                         })
                                     }
                                 </NavDropdown>
-
                             }
                             return (
                                 <Nav.Link key={key} as="div" className='px-2'>
@@ -56,7 +57,9 @@ export default function Navigation() {
                             )
                         })}
                     </Nav>
-                    
+                    <Search isScrolled={isScrolled}/>
+                        <Button variant='primary'>Login</Button>
+                        <Button variant='danger'>LogOut</Button>
                 </Navbar.Collapse>
             </Container >
         </Navbar >

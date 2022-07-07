@@ -19,22 +19,17 @@
     top: 0;
     left: 0;
 }
-.search {
-    @include flex-center;
-    flex-direction: column;
+.search-title {
+    $baseTime: 5;
+    font-size: 3rem;
+    color: white;
+    margin: 2rem;
+    text-align: center;
     position: absolute;
-    .search-title {
-        $baseTime: 5;
-        font-size: 3rem;
-        color: white;
-        margin: 2rem;
-        text-align: center;
-        position: relative;
-        flex-grow: 1;
-        &::after {
-            content: "";
-            animation: home-page-title calc(length($messages) * $baseTime) + 0s ease-in-out infinite forwards,
-                visibility-home $baseTime + 0s ease-in-out infinite forwards;
-        }
+    flex-grow: 1;
+    &::after {
+        content: "";
+        animation: home-page-title calc(length($messages) * $baseTime) + 0s ease-in-out infinite forwards,
+            visibility-home $baseTime + 0s ease-in-out infinite forwards;
     }
 }

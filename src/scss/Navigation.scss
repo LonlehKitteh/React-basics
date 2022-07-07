@@ -16,6 +16,9 @@
         text-decoration: dotted;
         color: white !important;
     }
+    .navbar-collapse{
+        gap: 10px;
+    }
 }
 .dropdown-item {
     &:active {

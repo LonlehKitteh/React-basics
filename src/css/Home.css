@@ -1,35 +1,41 @@
 @-webkit-keyframes home-page-title {
   from {
-    content: "For the worthy!";
+    content: "Kocham Pana Pantaka!";
   }
-  25% {
+  20% {
     content: "Search for something.";
   }
-  50% {
+  40% {
     content: "Come on don't be afraid!";
   }
-  75% {
+  60% {
     content: "The world isn't for cowards.";
   }
-  100% {
+  80% {
     content: "For the worthy!";
+  }
+  100% {
+    content: "Kocham Pana Pantaka!";
   }
 }
 @keyframes home-page-title {
   from {
-    content: "For the worthy!";
+    content: "Kocham Pana Pantaka!";
   }
-  25% {
+  20% {
     content: "Search for something.";
   }
-  50% {
+  40% {
     content: "Come on don't be afraid!";
   }
-  75% {
+  60% {
     content: "The world isn't for cowards.";
   }
-  100% {
+  80% {
     content: "For the worthy!";
+  }
+  100% {
+    content: "Kocham Pana Pantaka!";
   }
 }
 @-webkit-keyframes visibility-home {
@@ -72,23 +78,16 @@
   left: 0;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-}
-.search .search-title {
+.search-title {
   font-size: 3rem;
   color: white;
   margin: 2rem;
   text-align: center;
-  position: relative;
+  position: absolute;
   flex-grow: 1;
 }
-.search .search-title::after {
+.search-title::after {
   content: "";
-  -webkit-animation: home-page-title 20s ease-in-out infinite forwards, visibility-home 5s ease-in-out infinite forwards;
-          animation: home-page-title 20s ease-in-out infinite forwards, visibility-home 5s ease-in-out infinite forwards;
+  -webkit-animation: home-page-title 25s ease-in-out infinite forwards, visibility-home 5s ease-in-out infinite forwards;
+          animation: home-page-title 25s ease-in-out infinite forwards, visibility-home 5s ease-in-out infinite forwards;
 }
